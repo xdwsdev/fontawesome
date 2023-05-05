@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    { 
+      "source": "/all.css",
+      "destination": "/6/all.css",
+      "permanent": true
+    }
+  ]
+}

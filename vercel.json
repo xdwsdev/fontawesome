@@ -7,7 +7,7 @@
     },
     {
       "source": "/css",
-      "destination": "https://cdn.jsdelivr.net/gh/mkrychtalek/fontawesome/6/all.css",
+      "destination": "https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css",
       "permanent": true
     }
   ]

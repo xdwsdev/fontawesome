@@ -4,6 +4,11 @@
       "source": "/all.css",
       "destination": "/6/all.css",
       "permanent": true
+    },
+    {
+      "source": "/css",
+      "destination": "https://cdn.jsdelivr.net/gh/mkrychtalek/fontawesome/6/all.css",
+      "permanent": true
     }
   ]
 }

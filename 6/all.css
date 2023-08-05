@@ -1,4 +1,9 @@
-/*! * Font Awesome Pro 6.0.0 (beta3) by @fontawesome - https://fontawesome.com (Provided by Mako - https://www.makopog.com) * Copyright 2021 Fonticons, Inc. */
+/*
+Font Awesome Pro 6.0.0 (beta3) by Font Awesome - https://fontawesome.com/
+Provided by Krychtalek.dev - https://krychtalek.dev/
+Copyright 2021 Fonticons, Inc.
+*/
+
 .fa{
  font-family:var(--fa-style-family,"Font Awesome 6 Pro");
  font-weight:var(--fa-style,900)

@@ -1,18 +1,63 @@
 <!DOCTYPE html>
     <head>
-        <title>Font Awesome Pro - MakoPog</title>
-        <link href="https://fonts.cdnfonts.com/css/dm-sans" rel="stylesheet">
+        <title>Font Awesome Pro - Krychtalek.dev</title>
+        <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
-    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     </head>
 <body>
-    <h1><img src="./img/favicon.png" width="100px;"></h1>
-    <br><br><br>
-    <a href="./6/all.css" class="button">Font Awesome 6 Pro</a><br><br>
-    <p class="subtitle">More coming soon...</p>
-    <br><br><br>
-    <p style="color:white;font-family:DM Sans,sans-serif;">Maintained by <a href="//krychtalekdev.com" style="color:white;">KrychtalekDev.com</a></p><link href="https://fonts.cdnfonts.com/css/dm-sans" rel="stylesheet">
-    <p style="color:darkred;font-family:DM Sans,sans-serif;"><a href="./license.html" style="color:white;">License & Information</a></p>
+    <main>
+        <h1><img src="./img/favicon.png" width="100px"></h1>
+        <div class="container">
+            <p class="name">Font Awesome 6 Pro</p>
+            <a class="code" id="copy">https://cdn.jsdelivr.net/gh/mkrychtalek/fontawesome/6/all.css</a>
+            <p class="tip">Click on the link to copy!</p>
+        </div>
+    </main>
+    <footer>
+        <p class="made-by">Created by <span class="made-by"><a class="made-by" href="//krychtalek.dev">Krychtalek.dev</a></span></p>
+    </footer>
+
+
     <script src="script.js" type="text/javascript"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the anchor element
+            const copy = document.getElementById('copy');
+
+            // Add a click event listener to the anchor
+            copy.addEventListener('click', function(event) {
+                // Prevent the default behavior (navigating to a new page)
+                event.preventDefault();
+
+                // Get the text content of the anchor
+                const textToCopy = copy.innerText;
+
+                // Create a temporary input element to copy the text to the clipboard
+                const tempInput = document.createElement('input');
+                tempInput.setAttribute('value', textToCopy);
+
+                // Append the input element to the DOM
+                document.body.appendChild(tempInput);
+
+                // Select the content of the input element
+                tempInput.select();
+
+                // Copy the selected text to the clipboard
+                document.execCommand('copy');
+
+                // Remove the temporary input element from the DOM
+                document.body.removeChild(tempInput);
+
+                // Optionally, you can provide some feedback to the user
+                copy.innerText = 'Copied!';
+                setTimeout(function() {
+                    copy.innerText = textToCopy;
+                }, 1000);
+            });
+        });
+    </script>
+
 </body>

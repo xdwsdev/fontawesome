@@ -1,31 +1,62 @@
 body{
-    background: #070706;
+    background: #151515;
     overflow: hidden;
-    font-family: DM Sans;
+    font-family: Inter, sans-serif;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+div.container{
+    margin-top: 125px;
 }
 
 h1{
     color: #fff;
-
     text-align: center;
 }
 
-p.subtitle{
+p.name{
     color: #fff;
     text-align: center;
     transition: all 0.2s;
     font-size: 20px;
+    font-weight: bold;
 }
 
-.button{
+.code{
+    background: #8f8f8f;
     color: #000;
-    text-decoration: none;
-    background: #fff;
     padding: 14px 16px;
-    border-radius: 15px;
+    border-radius: 12px;
+    cursor: pointer;
 }
 
-.button:hover{
-    background: #ededed;
+
+
+p.tip{
+    color: #8f8f8f;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+footer {
+    padding: 20px;
+}
+
+/* Dev by link */
+p.made-by{
+    color: #ababab;
+    margin-top: 100px;
+    font-family: Inter, sans-serif;
+}
+
+a.made-by{
+    color: #ababab;
 }

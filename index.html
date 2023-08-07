@@ -1,6 +1,6 @@
 <!DOCTYPE html>
     <head>
-        <title>Font Awesome Pro - Krychtalek.dev</title>
+        <title>Font Awesome Pro - MakoPog</title>
         <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
@@ -12,7 +12,8 @@
         <h1><img src="./img/favicon.png" width="100px"></h1>
         <div class="container">
             <p class="name">Font Awesome 6 Pro</p>
-            <a class="code" id="copy">https://cdn.jsdelivr.net/gh/mkrychtalek/fontawesome/6/all.css</a>
+            <a class="code" id="copy1">https://fa.mkpg.gq/css</a><p class="tip">or</p>
+            <a class="code" id="copy2">https://fa.makopog.com/css</a>
             <p class="tip">Click on the link to copy!</p>
         </div>
     </main>
@@ -25,7 +26,43 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Get the anchor element
-            const copy = document.getElementById('copy');
+            const copy = document.getElementById('copy1');
+
+            // Add a click event listener to the anchor
+            copy.addEventListener('click', function(event) {
+                // Prevent the default behavior (navigating to a new page)
+                event.preventDefault();
+
+                // Get the text content of the anchor
+                const textToCopy = copy.innerText;
+
+                // Create a temporary input element to copy the text to the clipboard
+                const tempInput = document.createElement('input');
+                tempInput.setAttribute('value', textToCopy);
+
+                // Append the input element to the DOM
+                document.body.appendChild(tempInput);
+
+                // Select the content of the input element
+                tempInput.select();
+
+                // Copy the selected text to the clipboard
+                document.execCommand('copy');
+
+                // Remove the temporary input element from the DOM
+                document.body.removeChild(tempInput);
+
+                // Optionally, you can provide some feedback to the user
+                copy.innerText = 'Copied!';
+                setTimeout(function() {
+                    copy.innerText = textToCopy;
+                }, 1000);
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the anchor element
+            const copy = document.getElementById('copy2');
 
             // Add a click event listener to the anchor
             copy.addEventListener('click', function(event) {

@@ -1,7 +1,7 @@
 body{
     background: #151515;
     overflow: hidden;
-    font-family: Inter, sans-serif;
+    font-family: Outfit, sans-serif;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -14,11 +14,13 @@ main {
 
 div.container{
     margin-top: 125px;
+    margin-bottom: 75px;
 }
 
 h1{
     color: #fff;
     text-align: center;
+    margin-top: 50px;
 }
 
 p.name{
@@ -29,12 +31,17 @@ p.name{
     font-weight: bold;
 }
 
+div.links{
+    margin-top: 25px;
+}
+
 .code{
-    background: #8f8f8f;
-    color: #000;
+    background: #5b5b5b;
+    color: #ededed;
     padding: 14px 16px;
     border-radius: 12px;
     cursor: pointer;
+    font-family: Consola Mono;
 }
 
 
@@ -44,6 +51,18 @@ p.tip{
     font-size: 15px;
     font-weight: 400;
     margin-top: 20px;
+}
+
+a.old{
+    color: #D0BCFF;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a.old:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
 
 footer {

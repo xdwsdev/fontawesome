@@ -1,0 +1,103 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+
+}
+
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list li:last-child {
+    margin-right: 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #D0BCFF;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+/* Style for the subcategories dropdown */
+.dropdown {
+    position: relative;
+}
+
+.sub-categories {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    top: 100%;
+    left: 0;
+    width: 150px;
+    list-style: none;
+}
+
+.dropdown:hover .sub-categories {
+    display: block;
+}
+
+.sub-categories li {
+    padding: 10px;
+}
+
+/* Hamburger menu style */
+.hamburger {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        z-index: 999;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}

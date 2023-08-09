@@ -1,100 +1,53 @@
 <!DOCTYPE html>
     <head>
         <title>Font Awesome Pro - MakoPog</title>
+        <link href="https://fonts.cdnfonts.com/css/outfit" rel="stylesheet">
         <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/consola-mono" rel="stylesheet">
+
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+        <link rel="stylesheet" href="navbar.css">
+
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+
         <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     </head>
 <body>
+<header>
+    <nav class="navbar">
+        <div class="logo">Font Awesome by MakoPog</div>
+        <ul class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#" onclick="showAlert()">Old Versions</a>
+                <!--<ul class="sub-categories">
+                    <li><a href="/old-versions/v6.4/">v6.4</a></li>
+                    <li><a href="/old-versions/v6.3/">v6.3</a></li>
+                    <li><a href="/old-versions/v6.2/">v6.2</a></li>
+                    <li style="margin-left: -20px;"><a href="/old-versions/v6.1/">v6.1</a></li>
+                </ul>-->
+            </li>
+        </ul>
+        <div class="hamburger">&#9776;</div>
+    </nav>
+</header>
     <main>
         <h1><img src="./img/favicon.png" width="100px"></h1>
         <div class="container">
-            <p class="name">Font Awesome 6 Pro</p>
-            <a class="code" id="copy1">https://fa.mkpg.gq/css</a><p class="tip">or</p>
-            <a class="code" id="copy2">https://fa.makopog.com/css</a>
+            <p class="name">Font Awesome Pro v6.4.2 </p>
+            <div class="links">
+                <a class="code" id="copyLink">https://fa.mkpg.gq/css/latest</a>
+            </div>
+
             <p class="tip">Click on the link to copy!</p>
         </div>
+        <a class="old" href="#" onclick="showAlert()">Old Versions</a>
     </main>
     <footer>
         <p class="made-by">Created by <span class="made-by"><a class="made-by" href="//krychtalek.dev">Krychtalek.dev</a></span></p>
     </footer>
-
-
-    <script src="script.js" type="text/javascript"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get the anchor element
-            const copy = document.getElementById('copy1');
-
-            // Add a click event listener to the anchor
-            copy.addEventListener('click', function(event) {
-                // Prevent the default behavior (navigating to a new page)
-                event.preventDefault();
-
-                // Get the text content of the anchor
-                const textToCopy = copy.innerText;
-
-                // Create a temporary input element to copy the text to the clipboard
-                const tempInput = document.createElement('input');
-                tempInput.setAttribute('value', textToCopy);
-
-                // Append the input element to the DOM
-                document.body.appendChild(tempInput);
-
-                // Select the content of the input element
-                tempInput.select();
-
-                // Copy the selected text to the clipboard
-                document.execCommand('copy');
-
-                // Remove the temporary input element from the DOM
-                document.body.removeChild(tempInput);
-
-                // Optionally, you can provide some feedback to the user
-                copy.innerText = 'Copied!';
-                setTimeout(function() {
-                    copy.innerText = textToCopy;
-                }, 1000);
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get the anchor element
-            const copy = document.getElementById('copy2');
-
-            // Add a click event listener to the anchor
-            copy.addEventListener('click', function(event) {
-                // Prevent the default behavior (navigating to a new page)
-                event.preventDefault();
-
-                // Get the text content of the anchor
-                const textToCopy = copy.innerText;
-
-                // Create a temporary input element to copy the text to the clipboard
-                const tempInput = document.createElement('input');
-                tempInput.setAttribute('value', textToCopy);
-
-                // Append the input element to the DOM
-                document.body.appendChild(tempInput);
-
-                // Select the content of the input element
-                tempInput.select();
-
-                // Copy the selected text to the clipboard
-                document.execCommand('copy');
-
-                // Remove the temporary input element from the DOM
-                document.body.removeChild(tempInput);
-
-                // Optionally, you can provide some feedback to the user
-                copy.innerText = 'Copied!';
-                setTimeout(function() {
-                    copy.innerText = textToCopy;
-                }, 1000);
-            });
-        });
-    </script>
-
+<script src="copy.js"></script>
+<script src="script.js"></script>
+<script src="navbar.js"></script>
 </body>

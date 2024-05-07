@@ -1,11 +1,33 @@
 body{
     background: #0e100f;
-    overflow: hidden;
     font-family: Mori, Inter, sans-serif;
     text-align: center;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #fffce1 #0e100f;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #0e100f;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #fffce1;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
 }
 
 main {
@@ -59,6 +81,7 @@ p.tip{
     font-size: 16px;
     font-weight: 400;
     margin-top: 20px;
+    margin-bottom: 70px;
 }
 
 section.old a.button{
